@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "729605836483",
+    "project_id": "ecosaathi-862d8",
+    "storage_bucket": "ecosaathi-862d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729605836483:android:204a4f78927c538f8e9c76",
+        "android_client_info": {
+          "package_name": "com.example.pict_frontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz700e3UZRZi2DTo0aVsPC0t07RV_Bo2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+<%- include('../includes/header.ejs',{authority:authority}) %>
+
+<div class="row">
+    <div class="col-sm-12">
+       <div class="card">
+          <div class="card-header d-flex justify-content-between">
+             <div class="header-title">
+                <h4 class="card-title">View Completed Events</h4>
+             </div>
+          </div>
+          <div class="card-body">
+            <p>All The events are displayed here</p>
+            <div class="table-responsive">
+                <table id="datatable" class="table table-striped" data-toggle="data-table">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% completedEvents.forEach(event => { %>
+                        <tr>
+                            <td><%= event.eventName %></td>
+                            <td><%= moment(event.eventStartDate).format('MMMM DD, YYYY') %></td>
+                            <td><%= moment(event.eventEndDate).format('MMMM DD, YYYY ') %></td>
+                            <td>
+                                <!-- HREF TO OPEN INDIVIDUAL EVENT PAGE -->
+                                <a href="/events/view-event-by-id/<%= event._id %>">
+                                    <img src="/images/icons/eyeIcon.png" alt="" srcset="">
+                                </a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+             </div>
+          </div>
+       </div>
+      
+      <%- include('../includes/footer.ejs') %>
+      
